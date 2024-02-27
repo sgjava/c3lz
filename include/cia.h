@@ -54,19 +54,21 @@
 
 #define ciaMs 1022            /* ~1 millisecond using CIA microsecond timer */
 
-extern unsigned char getKeyCol(unsigned char keyVal);
-extern unsigned char getLsKeyCol(unsigned char keyVal);
-extern unsigned char getRsKeyCol(unsigned char keyVal);
-extern unsigned char getKey(unsigned char keyRow);
-extern void getKeys(unsigned char* ciaKeyScan);
-extern unsigned char decodeKey();
-extern void initCia();
-extern void doneCia();
-extern void startTimerAB(unsigned int cia, unsigned int timerA, unsigned int timerB, unsigned char latch);
-extern void setCiaTod(unsigned int cia, unsigned char hour, unsigned char min, unsigned char sec, unsigned char tenth);
-extern void startTimerA(unsigned int cia, unsigned int hz, unsigned char latch);
-extern void startTimerB(unsigned int cia, unsigned int hz, unsigned char latch);
-extern unsigned char getJoystick1();
-extern unsigned char getJoystick2();
+extern unsigned char __LIB__ getKeyCol(unsigned char keyVal);
+extern unsigned char __LIB__ getLsKeyCol(unsigned char keyVal);
+extern unsigned char __LIB__ getRsKeyCol(unsigned char keyVal);
+extern unsigned char __LIB__ getKey(unsigned char keyRow);
+extern void __LIB__ getKeys(unsigned char* ciaKeyScan);
+extern unsigned char __LIB__ decodeKey();
+extern void __LIB__ initCia();
+extern void __LIB__ doneCia();
+extern void __LIB__ startTimerAB(unsigned int cia, unsigned int timerA, unsigned int timerB, unsigned char latch);
+extern void __LIB__ setCiaTod(unsigned int cia, unsigned char hour, unsigned char min, unsigned char sec, unsigned char tenth);
+extern void __LIB__ startTimerA(unsigned int cia, unsigned int hz, unsigned char latch);
+extern void __LIB__ startTimerB(unsigned int cia, unsigned int hz, unsigned char latch);
+extern unsigned char __LIB__ getJoystick1();
+extern unsigned char __LIB__ getJoystick2();
+extern unsigned long __LIB__ todToMs(unsigned int cia);
+extern unsigned char __LIB__ bcdToByte(unsigned char bcd);
 
 #endif
