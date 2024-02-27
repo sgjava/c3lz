@@ -10,9 +10,9 @@
  * Get right shift key column. If column not found then 8 is returned.
  */
 unsigned char getRsKeyCol(unsigned char keyVal) {
-	static unsigned char rsKeyCol[8] =
-			{ 0xee, 0xed, 0xeb, 0xe7, 0xdf, 0xcf, 0xaf, 0x6f };
-	 unsigned char i = 0;
+	static unsigned char rsKeyCol[8] = { 0xee, 0xed, 0xeb, 0xe7, 0xdf, 0xcf,
+			0xaf, 0x6f };
+	unsigned char i = 0;
 	while ((i < 8) && (rsKeyCol[i] != keyVal)) {
 		i++;
 	}

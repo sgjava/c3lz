@@ -5,8 +5,9 @@
  *
  * Copyright (c) Steven P. Goldsmith. All rights reserved.
  *
- * zcc +cpm -I/home/sgoldsmith/z88dk/include -I./include -o ciademo.com ./src/demo/ciademo.c -L.build/lib -lc3l
  */
+
+#pragma output noprotectmsdos
 
 #include <cia.h>
 #include <stdio.h>

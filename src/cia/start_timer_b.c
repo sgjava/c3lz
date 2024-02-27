@@ -14,10 +14,10 @@
  */
 void startTimerB(unsigned int cia, unsigned int hz, unsigned char latch) {
 	unsigned int timerB = ciaTimerFreq / hz;
-	/* CIA Timer B lo */
-	outp(cia+ciaTimerBLo, (unsigned char) timerB);
-	/* CIA Timer B hi */
-	outp(cia+ciaTimerBHi, (unsigned char) (timerB >> 8));
-	/* Start CIA Timer B */
+	// CIA Timer B lo
+	outp(cia+ciaTimerBLo, (unsigned char ) timerB);
+	// CIA Timer B hi
+	outp(cia+ciaTimerBHi, (unsigned char ) (timerB >> 8));
+	// Start CIA Timer B
 	outp(cia+ciaCtrlRegB, latch);
 }

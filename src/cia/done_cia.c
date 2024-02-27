@@ -11,6 +11,6 @@
  * Enable CIA 1 interrupts.
  */
 void doneCia() {
-	/* Enable CIA 1 IRQ */
+	// Enable CIA 1 IRQ
 	outp(cia1+ciaIcr, ciaEnableIrq);
 }

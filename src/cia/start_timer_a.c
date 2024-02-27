@@ -14,10 +14,10 @@
  */
 void startTimerA(unsigned int cia, unsigned int hz, unsigned char latch) {
 	unsigned int timerA = ciaTimerFreq / hz;
-	/* CIA Timer A lo */
+	// CIA Timer A lo
 	outp(cia+ciaTimerALo, timerA);
-	/* CIA Timer A hi */
+	// CIA Timer A hi
 	outp(cia+ciaTimerAHi, (timerA >> 8));
-	/* Start CIA Timer A */
+	// Start CIA Timer A
 	outp(cia+ciaCtrlRegA, latch);
 }

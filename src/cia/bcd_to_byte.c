@@ -7,7 +7,7 @@
 #include <cia.h>
 
 /*
- * Convert bcd byte to base 10 byte.
+ * Convert BCD byte to base 10 byte.
  */
 unsigned char bcdToByte(unsigned char bcd) {
 	return ((bcd >> 4) * 10) + (bcd & 0x0f);

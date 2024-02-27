@@ -8,7 +8,7 @@ CC = zcc
 AS = z88dk-z80asm
 
 # Compiler flags
-CFLAGS = +cpm -mz80 -vn -clib=new -I$(HOME)/z88dk/include -I./include
+CFLAGS = +cpm -mz80 -vn -I$(HOME)/z88dk/include -I./include
 
 # Assembler flags
 ASFLAGS = -d -x./build/lib/c3l

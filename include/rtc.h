@@ -18,10 +18,8 @@
 #define rtcMode         0xb /* Mode */
 #define rtcDefaultMode  0x87 /* Binary, 24h, DST */
 
-extern void setRtcReg(unsigned char reg, unsigned char value);
-extern unsigned char getRtcReg(unsigned char reg);
-extern void setRtcMode(unsigned char mode);
-extern char* getRtcTime();
-extern char* getRtcDate();
+extern void __LIB__ setRtcReg(unsigned char reg, unsigned char value);
+extern unsigned char __LIB__ getRtcReg(unsigned char reg);
+extern void __LIB__ setRtcMode(unsigned char mode);
 
 #endif
