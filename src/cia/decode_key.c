@@ -14,7 +14,7 @@
  * returned if no keys pressed, unmapped keys pressed or unable to decode.
  */
 unsigned char decodeKey() {
-	 // Key to ASCII code unshifted. Unmapped keys are set to 0x00.
+	// Key to ASCII code unshifted. Unmapped keys are set to 0x00.
 	static unsigned char stdKeys[11][8] = { { 0x7f, 0x0d, 0x04, 0x00, 0x00,
 			0x00, 0x00, 0x18 }, { '3', 'w', 'a', '4', 'z', 's', 'e', 0x00 }, {
 			'5', 'r', 'd', '6', 'c', 'f', 't', 'x' }, { '7', 'y', 'g', '8', 'b',
@@ -25,7 +25,7 @@ unsigned char decodeKey() {
 			0x0d, '6', '9', '3' }, { 0x00, '0', '.', 0x05, 0x18, 0x13, 0x04,
 			0x00 } };
 
-	 // Key to ASCII code shifted. Unmapped keys are set to 0x00.
+	// Key to ASCII code shifted. Unmapped keys are set to 0x00.
 	static unsigned char shiftKeys[11][8] = { { 0x7f, 0x0d, 0x04, 0x00, 0x00,
 			0x00, 0x00, 0x18 }, { '#', 'W', 'A', '$', 'Z', 'S', 'E', 0x00 }, {
 			'%', 'R', 'D', '&', 'C', 'F', 'T', 'X' }, { '\'', 'Y', 'G', '(',

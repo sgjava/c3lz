@@ -25,6 +25,7 @@ mkdir ./build/demo
 # Build demo apps
 zcc +cpm -mz80 -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/ciademo.com ./src/demo/ciademo.c -L./build/lib -lc3l
 zcc +cpm -mz80 -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/rtcdemo.com ./src/demo/rtcdemo.c -L./build/lib -lc3l
+zcc +cpm -mz80 -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/siddemo.com ./src/demo/siddemo.c -L./build/lib -lc3l
 # Remove curent disk image
 rm -f ./disks/demo.d71
 # Create new disk image
