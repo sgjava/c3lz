@@ -103,9 +103,9 @@ main() {
 	planeSound();
 	printf("Tommy gun\n");
 	tommyGunSound();
-	printf("Bomb drop sound\n");
+	printf("Bomb drop\n");
 	bombDropSound();
-	printf("Explode sound\n");
+	printf("Explode\n");
 	explodeSound();
 	setSidVol(0, 0);
 	doneCia();
