@@ -1,0 +1,520 @@
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/sid/clear_sid.c -o build/sid/clear_sid.o
+
+PROCESSING src/sid/clear_sid.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/sid/clear_sid.c" "/tmp/tmpXXsCyNYk.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXEVeSbj/zcc_opt.def" < "/tmp/tmpXXsCyNYk.i2" > "/tmp/tmpXXsCyNYk.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXEVeSbj/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXsCyNYk.i" -o "/tmp/tmpXXsCyNYk.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXsCyNYk.opt" > "/tmp/tmpXXsCyNYk.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXsCyNYk.op1" > "/tmp/tmpXXsCyNYk.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXsCyNYk.opt" > "/tmp/tmpXXsCyNYk.asm"
+cat "/tmp/tmpXXsCyNYk.asm" >> "/tmp/tmpXXsCyNYk.tmp"
+cat "/tmp/tmpXXsCyNYk.tmp" >> "/tmp/tmpXXsCyNYk.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXEVeSbj" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXsCyNYk.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXsCyNYk.o" >> "build/sid/clear_sid.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/sid/read_sid_mouse.c -o build/sid/read_sid_mouse.o
+
+PROCESSING src/sid/read_sid_mouse.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/sid/read_sid_mouse.c" "/tmp/tmpXXoF5NcR.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXrCJvUe/zcc_opt.def" < "/tmp/tmpXXoF5NcR.i2" > "/tmp/tmpXXoF5NcR.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXrCJvUe/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXoF5NcR.i" -o "/tmp/tmpXXoF5NcR.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXoF5NcR.opt" > "/tmp/tmpXXoF5NcR.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXoF5NcR.op1" > "/tmp/tmpXXoF5NcR.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXoF5NcR.opt" > "/tmp/tmpXXoF5NcR.asm"
+cat "/tmp/tmpXXoF5NcR.asm" >> "/tmp/tmpXXoF5NcR.tmp"
+cat "/tmp/tmpXXoF5NcR.tmp" >> "/tmp/tmpXXoF5NcR.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXrCJvUe" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXoF5NcR.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXoF5NcR.o" >> "build/sid/read_sid_mouse.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/sid/read_sid_pots.c -o build/sid/read_sid_pots.o
+
+PROCESSING src/sid/read_sid_pots.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/sid/read_sid_pots.c" "/tmp/tmpXXrjge5f.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXX4ObGI/zcc_opt.def" < "/tmp/tmpXXrjge5f.i2" > "/tmp/tmpXXrjge5f.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXX4ObGI/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXrjge5f.i" -o "/tmp/tmpXXrjge5f.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXrjge5f.opt" > "/tmp/tmpXXrjge5f.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXrjge5f.op1" > "/tmp/tmpXXrjge5f.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXrjge5f.opt" > "/tmp/tmpXXrjge5f.asm"
+cat "/tmp/tmpXXrjge5f.asm" >> "/tmp/tmpXXrjge5f.tmp"
+cat "/tmp/tmpXXrjge5f.tmp" >> "/tmp/tmpXXrjge5f.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXX4ObGI" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXrjge5f.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXrjge5f.o" >> "build/sid/read_sid_pots.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/sid/set_sid_att.c -o build/sid/set_sid_att.o
+
+PROCESSING src/sid/set_sid_att.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/sid/set_sid_att.c" "/tmp/tmpXXwNgbZT.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXL15oaH/zcc_opt.def" < "/tmp/tmpXXwNgbZT.i2" > "/tmp/tmpXXwNgbZT.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXL15oaH/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXwNgbZT.i" -o "/tmp/tmpXXwNgbZT.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXwNgbZT.opt" > "/tmp/tmpXXwNgbZT.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXwNgbZT.op1" > "/tmp/tmpXXwNgbZT.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXwNgbZT.opt" > "/tmp/tmpXXwNgbZT.asm"
+cat "/tmp/tmpXXwNgbZT.asm" >> "/tmp/tmpXXwNgbZT.tmp"
+cat "/tmp/tmpXXwNgbZT.tmp" >> "/tmp/tmpXXwNgbZT.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXL15oaH" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXwNgbZT.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXwNgbZT.o" >> "build/sid/set_sid_att.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/sid/set_sid_env.c -o build/sid/set_sid_env.o
+
+PROCESSING src/sid/set_sid_env.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/sid/set_sid_env.c" "/tmp/tmpXXsVjI6N.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXcvtfDJ/zcc_opt.def" < "/tmp/tmpXXsVjI6N.i2" > "/tmp/tmpXXsVjI6N.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXcvtfDJ/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXsVjI6N.i" -o "/tmp/tmpXXsVjI6N.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXsVjI6N.opt" > "/tmp/tmpXXsVjI6N.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXsVjI6N.op1" > "/tmp/tmpXXsVjI6N.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXsVjI6N.opt" > "/tmp/tmpXXsVjI6N.asm"
+cat "/tmp/tmpXXsVjI6N.asm" >> "/tmp/tmpXXsVjI6N.tmp"
+cat "/tmp/tmpXXsVjI6N.tmp" >> "/tmp/tmpXXsVjI6N.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXcvtfDJ" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXsVjI6N.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXsVjI6N.o" >> "build/sid/set_sid_env.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/sid/set_sid_freq.c -o build/sid/set_sid_freq.o
+
+PROCESSING src/sid/set_sid_freq.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/sid/set_sid_freq.c" "/tmp/tmpXXCVFWea.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXX5kWbTJ/zcc_opt.def" < "/tmp/tmpXXCVFWea.i2" > "/tmp/tmpXXCVFWea.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXX5kWbTJ/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXCVFWea.i" -o "/tmp/tmpXXCVFWea.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXCVFWea.opt" > "/tmp/tmpXXCVFWea.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXCVFWea.op1" > "/tmp/tmpXXCVFWea.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXCVFWea.opt" > "/tmp/tmpXXCVFWea.asm"
+cat "/tmp/tmpXXCVFWea.asm" >> "/tmp/tmpXXCVFWea.tmp"
+cat "/tmp/tmpXXCVFWea.tmp" >> "/tmp/tmpXXCVFWea.asm"
+z88dk-z80asm -I"/tmp/tmpzccXX5kWbTJ" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXCVFWea.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXCVFWea.o" >> "build/sid/set_sid_freq.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/sid/set_sid_pul_wav.c -o build/sid/set_sid_pul_wav.o
+
+PROCESSING src/sid/set_sid_pul_wav.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/sid/set_sid_pul_wav.c" "/tmp/tmpXXpTJ0NC.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXGAkpFJ/zcc_opt.def" < "/tmp/tmpXXpTJ0NC.i2" > "/tmp/tmpXXpTJ0NC.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXGAkpFJ/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXpTJ0NC.i" -o "/tmp/tmpXXpTJ0NC.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXpTJ0NC.opt" > "/tmp/tmpXXpTJ0NC.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXpTJ0NC.op1" > "/tmp/tmpXXpTJ0NC.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXpTJ0NC.opt" > "/tmp/tmpXXpTJ0NC.asm"
+cat "/tmp/tmpXXpTJ0NC.asm" >> "/tmp/tmpXXpTJ0NC.tmp"
+cat "/tmp/tmpXXpTJ0NC.tmp" >> "/tmp/tmpXXpTJ0NC.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXGAkpFJ" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXpTJ0NC.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXpTJ0NC.o" >> "build/sid/set_sid_pul_wav.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/sid/set_sid_rel.c -o build/sid/set_sid_rel.o
+
+PROCESSING src/sid/set_sid_rel.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/sid/set_sid_rel.c" "/tmp/tmpXXGC7CEX.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXKv7Wbe/zcc_opt.def" < "/tmp/tmpXXGC7CEX.i2" > "/tmp/tmpXXGC7CEX.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXKv7Wbe/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXGC7CEX.i" -o "/tmp/tmpXXGC7CEX.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXGC7CEX.opt" > "/tmp/tmpXXGC7CEX.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXGC7CEX.op1" > "/tmp/tmpXXGC7CEX.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXGC7CEX.opt" > "/tmp/tmpXXGC7CEX.asm"
+cat "/tmp/tmpXXGC7CEX.asm" >> "/tmp/tmpXXGC7CEX.tmp"
+cat "/tmp/tmpXXGC7CEX.tmp" >> "/tmp/tmpXXGC7CEX.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXKv7Wbe" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXGC7CEX.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXGC7CEX.o" >> "build/sid/set_sid_rel.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/sid/set_sid_vol.c -o build/sid/set_sid_vol.o
+
+PROCESSING src/sid/set_sid_vol.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/sid/set_sid_vol.c" "/tmp/tmpXXnTXrZG.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXX5AyT8R/zcc_opt.def" < "/tmp/tmpXXnTXrZG.i2" > "/tmp/tmpXXnTXrZG.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXX5AyT8R/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXnTXrZG.i" -o "/tmp/tmpXXnTXrZG.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXnTXrZG.opt" > "/tmp/tmpXXnTXrZG.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXnTXrZG.op1" > "/tmp/tmpXXnTXrZG.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXnTXrZG.opt" > "/tmp/tmpXXnTXrZG.asm"
+cat "/tmp/tmpXXnTXrZG.asm" >> "/tmp/tmpXXnTXrZG.tmp"
+cat "/tmp/tmpXXnTXrZG.tmp" >> "/tmp/tmpXXnTXrZG.asm"
+z88dk-z80asm -I"/tmp/tmpzccXX5AyT8R" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXnTXrZG.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXnTXrZG.o" >> "build/sid/set_sid_vol.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/bcd_to_byte.c -o build/cia/bcd_to_byte.o
+
+PROCESSING src/cia/bcd_to_byte.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/bcd_to_byte.c" "/tmp/tmpXXCpMkjX.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXmOfJGG/zcc_opt.def" < "/tmp/tmpXXCpMkjX.i2" > "/tmp/tmpXXCpMkjX.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXmOfJGG/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXCpMkjX.i" -o "/tmp/tmpXXCpMkjX.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXCpMkjX.opt" > "/tmp/tmpXXCpMkjX.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXCpMkjX.op1" > "/tmp/tmpXXCpMkjX.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXCpMkjX.opt" > "/tmp/tmpXXCpMkjX.asm"
+cat "/tmp/tmpXXCpMkjX.asm" >> "/tmp/tmpXXCpMkjX.tmp"
+cat "/tmp/tmpXXCpMkjX.tmp" >> "/tmp/tmpXXCpMkjX.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXmOfJGG" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXCpMkjX.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXCpMkjX.o" >> "build/cia/bcd_to_byte.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/decode_key.c -o build/cia/decode_key.o
+
+PROCESSING src/cia/decode_key.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/decode_key.c" "/tmp/tmpXXvC4dmG.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXL2i6so/zcc_opt.def" < "/tmp/tmpXXvC4dmG.i2" > "/tmp/tmpXXvC4dmG.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXL2i6so/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXvC4dmG.i" -o "/tmp/tmpXXvC4dmG.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXvC4dmG.opt" > "/tmp/tmpXXvC4dmG.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXvC4dmG.op1" > "/tmp/tmpXXvC4dmG.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXvC4dmG.opt" > "/tmp/tmpXXvC4dmG.asm"
+cat "/tmp/tmpXXvC4dmG.asm" >> "/tmp/tmpXXvC4dmG.tmp"
+cat "/tmp/tmpXXvC4dmG.tmp" >> "/tmp/tmpXXvC4dmG.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXL2i6so" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXvC4dmG.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXvC4dmG.o" >> "build/cia/decode_key.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/done_cia.c -o build/cia/done_cia.o
+
+PROCESSING src/cia/done_cia.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/done_cia.c" "/tmp/tmpXXVlavTK.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXpfHlPE/zcc_opt.def" < "/tmp/tmpXXVlavTK.i2" > "/tmp/tmpXXVlavTK.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXpfHlPE/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXVlavTK.i" -o "/tmp/tmpXXVlavTK.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXVlavTK.opt" > "/tmp/tmpXXVlavTK.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXVlavTK.op1" > "/tmp/tmpXXVlavTK.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXVlavTK.opt" > "/tmp/tmpXXVlavTK.asm"
+cat "/tmp/tmpXXVlavTK.asm" >> "/tmp/tmpXXVlavTK.tmp"
+cat "/tmp/tmpXXVlavTK.tmp" >> "/tmp/tmpXXVlavTK.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXpfHlPE" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXVlavTK.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXVlavTK.o" >> "build/cia/done_cia.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/get_joystick_1.c -o build/cia/get_joystick_1.o
+
+PROCESSING src/cia/get_joystick_1.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/get_joystick_1.c" "/tmp/tmpXXefA8mQ.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXX9Iz5lS/zcc_opt.def" < "/tmp/tmpXXefA8mQ.i2" > "/tmp/tmpXXefA8mQ.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXX9Iz5lS/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXefA8mQ.i" -o "/tmp/tmpXXefA8mQ.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXefA8mQ.opt" > "/tmp/tmpXXefA8mQ.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXefA8mQ.op1" > "/tmp/tmpXXefA8mQ.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXefA8mQ.opt" > "/tmp/tmpXXefA8mQ.asm"
+cat "/tmp/tmpXXefA8mQ.asm" >> "/tmp/tmpXXefA8mQ.tmp"
+cat "/tmp/tmpXXefA8mQ.tmp" >> "/tmp/tmpXXefA8mQ.asm"
+z88dk-z80asm -I"/tmp/tmpzccXX9Iz5lS" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXefA8mQ.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXefA8mQ.o" >> "build/cia/get_joystick_1.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/get_joystick_2.c -o build/cia/get_joystick_2.o
+
+PROCESSING src/cia/get_joystick_2.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/get_joystick_2.c" "/tmp/tmpXXZffLdC.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXnJof31/zcc_opt.def" < "/tmp/tmpXXZffLdC.i2" > "/tmp/tmpXXZffLdC.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXnJof31/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXZffLdC.i" -o "/tmp/tmpXXZffLdC.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXZffLdC.opt" > "/tmp/tmpXXZffLdC.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXZffLdC.op1" > "/tmp/tmpXXZffLdC.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXZffLdC.opt" > "/tmp/tmpXXZffLdC.asm"
+cat "/tmp/tmpXXZffLdC.asm" >> "/tmp/tmpXXZffLdC.tmp"
+cat "/tmp/tmpXXZffLdC.tmp" >> "/tmp/tmpXXZffLdC.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXnJof31" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXZffLdC.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXZffLdC.o" >> "build/cia/get_joystick_2.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/get_key.c -o build/cia/get_key.o
+
+PROCESSING src/cia/get_key.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/get_key.c" "/tmp/tmpXXGt4xeO.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXYPFqWp/zcc_opt.def" < "/tmp/tmpXXGt4xeO.i2" > "/tmp/tmpXXGt4xeO.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXYPFqWp/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXGt4xeO.i" -o "/tmp/tmpXXGt4xeO.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXGt4xeO.opt" > "/tmp/tmpXXGt4xeO.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXGt4xeO.op1" > "/tmp/tmpXXGt4xeO.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXGt4xeO.opt" > "/tmp/tmpXXGt4xeO.asm"
+cat "/tmp/tmpXXGt4xeO.asm" >> "/tmp/tmpXXGt4xeO.tmp"
+cat "/tmp/tmpXXGt4xeO.tmp" >> "/tmp/tmpXXGt4xeO.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXYPFqWp" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXGt4xeO.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXGt4xeO.o" >> "build/cia/get_key.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/get_key_col.c -o build/cia/get_key_col.o
+
+PROCESSING src/cia/get_key_col.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/get_key_col.c" "/tmp/tmpXXzzmMO4.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXoHLnCd/zcc_opt.def" < "/tmp/tmpXXzzmMO4.i2" > "/tmp/tmpXXzzmMO4.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXoHLnCd/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXzzmMO4.i" -o "/tmp/tmpXXzzmMO4.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXzzmMO4.opt" > "/tmp/tmpXXzzmMO4.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXzzmMO4.op1" > "/tmp/tmpXXzzmMO4.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXzzmMO4.opt" > "/tmp/tmpXXzzmMO4.asm"
+cat "/tmp/tmpXXzzmMO4.asm" >> "/tmp/tmpXXzzmMO4.tmp"
+cat "/tmp/tmpXXzzmMO4.tmp" >> "/tmp/tmpXXzzmMO4.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXoHLnCd" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXzzmMO4.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXzzmMO4.o" >> "build/cia/get_key_col.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/get_keys.c -o build/cia/get_keys.o
+
+PROCESSING src/cia/get_keys.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/get_keys.c" "/tmp/tmpXXQUA58T.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXArpqou/zcc_opt.def" < "/tmp/tmpXXQUA58T.i2" > "/tmp/tmpXXQUA58T.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXArpqou/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXQUA58T.i" -o "/tmp/tmpXXQUA58T.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXQUA58T.opt" > "/tmp/tmpXXQUA58T.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXQUA58T.op1" > "/tmp/tmpXXQUA58T.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXQUA58T.opt" > "/tmp/tmpXXQUA58T.asm"
+cat "/tmp/tmpXXQUA58T.asm" >> "/tmp/tmpXXQUA58T.tmp"
+cat "/tmp/tmpXXQUA58T.tmp" >> "/tmp/tmpXXQUA58T.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXArpqou" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXQUA58T.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXQUA58T.o" >> "build/cia/get_keys.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/get_ls_key_col.c -o build/cia/get_ls_key_col.o
+
+PROCESSING src/cia/get_ls_key_col.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/get_ls_key_col.c" "/tmp/tmpXXDgzrXA.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXX6I7EkW/zcc_opt.def" < "/tmp/tmpXXDgzrXA.i2" > "/tmp/tmpXXDgzrXA.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXX6I7EkW/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXDgzrXA.i" -o "/tmp/tmpXXDgzrXA.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXDgzrXA.opt" > "/tmp/tmpXXDgzrXA.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXDgzrXA.op1" > "/tmp/tmpXXDgzrXA.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXDgzrXA.opt" > "/tmp/tmpXXDgzrXA.asm"
+cat "/tmp/tmpXXDgzrXA.asm" >> "/tmp/tmpXXDgzrXA.tmp"
+cat "/tmp/tmpXXDgzrXA.tmp" >> "/tmp/tmpXXDgzrXA.asm"
+z88dk-z80asm -I"/tmp/tmpzccXX6I7EkW" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXDgzrXA.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXDgzrXA.o" >> "build/cia/get_ls_key_col.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/get_rs_key_col.c -o build/cia/get_rs_key_col.o
+
+PROCESSING src/cia/get_rs_key_col.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/get_rs_key_col.c" "/tmp/tmpXXpu5u9P.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXBLe7rE/zcc_opt.def" < "/tmp/tmpXXpu5u9P.i2" > "/tmp/tmpXXpu5u9P.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXBLe7rE/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXpu5u9P.i" -o "/tmp/tmpXXpu5u9P.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXpu5u9P.opt" > "/tmp/tmpXXpu5u9P.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXpu5u9P.op1" > "/tmp/tmpXXpu5u9P.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXpu5u9P.opt" > "/tmp/tmpXXpu5u9P.asm"
+cat "/tmp/tmpXXpu5u9P.asm" >> "/tmp/tmpXXpu5u9P.tmp"
+cat "/tmp/tmpXXpu5u9P.tmp" >> "/tmp/tmpXXpu5u9P.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXBLe7rE" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXpu5u9P.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXpu5u9P.o" >> "build/cia/get_rs_key_col.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/init_cia.c -o build/cia/init_cia.o
+
+PROCESSING src/cia/init_cia.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/init_cia.c" "/tmp/tmpXX3w844i.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXpGVzjz/zcc_opt.def" < "/tmp/tmpXX3w844i.i2" > "/tmp/tmpXX3w844i.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXpGVzjz/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXX3w844i.i" -o "/tmp/tmpXX3w844i.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXX3w844i.opt" > "/tmp/tmpXX3w844i.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXX3w844i.op1" > "/tmp/tmpXX3w844i.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXX3w844i.opt" > "/tmp/tmpXX3w844i.asm"
+cat "/tmp/tmpXX3w844i.asm" >> "/tmp/tmpXX3w844i.tmp"
+cat "/tmp/tmpXX3w844i.tmp" >> "/tmp/tmpXX3w844i.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXpGVzjz" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXX3w844i.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXX3w844i.o" >> "build/cia/init_cia.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/set_cia_tod.c -o build/cia/set_cia_tod.o
+
+PROCESSING src/cia/set_cia_tod.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/set_cia_tod.c" "/tmp/tmpXXY3aJdm.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXX94bRhH/zcc_opt.def" < "/tmp/tmpXXY3aJdm.i2" > "/tmp/tmpXXY3aJdm.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXX94bRhH/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXY3aJdm.i" -o "/tmp/tmpXXY3aJdm.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXY3aJdm.opt" > "/tmp/tmpXXY3aJdm.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXY3aJdm.op1" > "/tmp/tmpXXY3aJdm.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXY3aJdm.opt" > "/tmp/tmpXXY3aJdm.asm"
+cat "/tmp/tmpXXY3aJdm.asm" >> "/tmp/tmpXXY3aJdm.tmp"
+cat "/tmp/tmpXXY3aJdm.tmp" >> "/tmp/tmpXXY3aJdm.asm"
+z88dk-z80asm -I"/tmp/tmpzccXX94bRhH" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXY3aJdm.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXY3aJdm.o" >> "build/cia/set_cia_tod.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/start_timer_ab.c -o build/cia/start_timer_ab.o
+
+PROCESSING src/cia/start_timer_ab.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/start_timer_ab.c" "/tmp/tmpXX4pakZP.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXQV0LeF/zcc_opt.def" < "/tmp/tmpXX4pakZP.i2" > "/tmp/tmpXX4pakZP.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXQV0LeF/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXX4pakZP.i" -o "/tmp/tmpXX4pakZP.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXX4pakZP.opt" > "/tmp/tmpXX4pakZP.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXX4pakZP.op1" > "/tmp/tmpXX4pakZP.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXX4pakZP.opt" > "/tmp/tmpXX4pakZP.asm"
+cat "/tmp/tmpXX4pakZP.asm" >> "/tmp/tmpXX4pakZP.tmp"
+cat "/tmp/tmpXX4pakZP.tmp" >> "/tmp/tmpXX4pakZP.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXQV0LeF" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXX4pakZP.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXX4pakZP.o" >> "build/cia/start_timer_ab.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/start_timer_a.c -o build/cia/start_timer_a.o
+
+PROCESSING src/cia/start_timer_a.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/start_timer_a.c" "/tmp/tmpXXRxBgiT.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXWHEDR7/zcc_opt.def" < "/tmp/tmpXXRxBgiT.i2" > "/tmp/tmpXXRxBgiT.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXWHEDR7/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXRxBgiT.i" -o "/tmp/tmpXXRxBgiT.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXRxBgiT.opt" > "/tmp/tmpXXRxBgiT.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXRxBgiT.op1" > "/tmp/tmpXXRxBgiT.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXRxBgiT.opt" > "/tmp/tmpXXRxBgiT.asm"
+cat "/tmp/tmpXXRxBgiT.asm" >> "/tmp/tmpXXRxBgiT.tmp"
+cat "/tmp/tmpXXRxBgiT.tmp" >> "/tmp/tmpXXRxBgiT.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXWHEDR7" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXRxBgiT.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXRxBgiT.o" >> "build/cia/start_timer_a.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/start_timer_b.c -o build/cia/start_timer_b.o
+
+PROCESSING src/cia/start_timer_b.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/start_timer_b.c" "/tmp/tmpXXUiqFet.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXDyCrsk/zcc_opt.def" < "/tmp/tmpXXUiqFet.i2" > "/tmp/tmpXXUiqFet.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXDyCrsk/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXUiqFet.i" -o "/tmp/tmpXXUiqFet.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXUiqFet.opt" > "/tmp/tmpXXUiqFet.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXUiqFet.op1" > "/tmp/tmpXXUiqFet.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXUiqFet.opt" > "/tmp/tmpXXUiqFet.asm"
+cat "/tmp/tmpXXUiqFet.asm" >> "/tmp/tmpXXUiqFet.tmp"
+cat "/tmp/tmpXXUiqFet.tmp" >> "/tmp/tmpXXUiqFet.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXDyCrsk" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXUiqFet.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXUiqFet.o" >> "build/cia/start_timer_b.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/cia/tod_to_ms.c -o build/cia/tod_to_ms.o
+
+PROCESSING src/cia/tod_to_ms.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/cia/tod_to_ms.c" "/tmp/tmpXXva49nD.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXM7dHUV/zcc_opt.def" < "/tmp/tmpXXva49nD.i2" > "/tmp/tmpXXva49nD.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXM7dHUV/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXva49nD.i" -o "/tmp/tmpXXva49nD.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXva49nD.opt" > "/tmp/tmpXXva49nD.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXva49nD.op1" > "/tmp/tmpXXva49nD.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXva49nD.opt" > "/tmp/tmpXXva49nD.asm"
+cat "/tmp/tmpXXva49nD.asm" >> "/tmp/tmpXXva49nD.tmp"
+cat "/tmp/tmpXXva49nD.tmp" >> "/tmp/tmpXXva49nD.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXM7dHUV" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXva49nD.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXva49nD.o" >> "build/cia/tod_to_ms.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/rtc/get_rtc_mode.c -o build/rtc/get_rtc_mode.o
+
+PROCESSING src/rtc/get_rtc_mode.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/rtc/get_rtc_mode.c" "/tmp/tmpXXb1VfGi.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXX0QGtnc/zcc_opt.def" < "/tmp/tmpXXb1VfGi.i2" > "/tmp/tmpXXb1VfGi.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXX0QGtnc/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXb1VfGi.i" -o "/tmp/tmpXXb1VfGi.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXb1VfGi.opt" > "/tmp/tmpXXb1VfGi.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXb1VfGi.op1" > "/tmp/tmpXXb1VfGi.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXb1VfGi.opt" > "/tmp/tmpXXb1VfGi.asm"
+cat "/tmp/tmpXXb1VfGi.asm" >> "/tmp/tmpXXb1VfGi.tmp"
+cat "/tmp/tmpXXb1VfGi.tmp" >> "/tmp/tmpXXb1VfGi.asm"
+z88dk-z80asm -I"/tmp/tmpzccXX0QGtnc" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXb1VfGi.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXb1VfGi.o" >> "build/rtc/get_rtc_mode.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/rtc/get_rtc_reg.c -o build/rtc/get_rtc_reg.o
+
+PROCESSING src/rtc/get_rtc_reg.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/rtc/get_rtc_reg.c" "/tmp/tmpXXT1UNfW.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXu8X5kd/zcc_opt.def" < "/tmp/tmpXXT1UNfW.i2" > "/tmp/tmpXXT1UNfW.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXu8X5kd/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXT1UNfW.i" -o "/tmp/tmpXXT1UNfW.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXT1UNfW.opt" > "/tmp/tmpXXT1UNfW.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXT1UNfW.op1" > "/tmp/tmpXXT1UNfW.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXT1UNfW.opt" > "/tmp/tmpXXT1UNfW.asm"
+cat "/tmp/tmpXXT1UNfW.asm" >> "/tmp/tmpXXT1UNfW.tmp"
+cat "/tmp/tmpXXT1UNfW.tmp" >> "/tmp/tmpXXT1UNfW.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXu8X5kd" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXT1UNfW.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXT1UNfW.o" >> "build/rtc/get_rtc_reg.o"
+zcc +cpm -v -I/home/sgoldsmith/z88dk/include -I./include -c src/rtc/set_rtc_reg.c -o build/rtc/set_rtc_reg.o
+
+PROCESSING src/rtc/set_rtc_reg.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "src/rtc/set_rtc_reg.c" "/tmp/tmpXXXSsRuU.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXP2JKhv/zcc_opt.def" < "/tmp/tmpXXXSsRuU.i2" > "/tmp/tmpXXXSsRuU.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXP2JKhv/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXXSsRuU.i" -o "/tmp/tmpXXXSsRuU.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXXSsRuU.opt" > "/tmp/tmpXXXSsRuU.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXXSsRuU.op1" > "/tmp/tmpXXXSsRuU.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXXSsRuU.opt" > "/tmp/tmpXXXSsRuU.asm"
+cat "/tmp/tmpXXXSsRuU.asm" >> "/tmp/tmpXXXSsRuU.tmp"
+cat "/tmp/tmpXXXSsRuU.tmp" >> "/tmp/tmpXXXSsRuU.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXP2JKhv" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXXSsRuU.asm"
+
+GENERATING OUTPUT
+cat "/tmp/tmpXXXSsRuU.o" >> "build/rtc/set_rtc_reg.o"
+z88dk-z80asm -d -x./build/lib/c3l @c3l.lst
+
+PROCESSING ./src/demo/ciademo.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "./src/demo/ciademo.c" "/tmp/tmpXXW0TCz9.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXguYZnP/zcc_opt.def" < "/tmp/tmpXXW0TCz9.i2" > "/tmp/tmpXXW0TCz9.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXguYZnP/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXW0TCz9.i" -o "/tmp/tmpXXW0TCz9.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXW0TCz9.opt" > "/tmp/tmpXXW0TCz9.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXW0TCz9.op1" > "/tmp/tmpXXW0TCz9.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXW0TCz9.opt" > "/tmp/tmpXXW0TCz9.asm"
+cat "/tmp/tmpXXW0TCz9.asm" >> "/tmp/tmpXXW0TCz9.tmp"
+cat "/tmp/tmpXXW0TCz9.tmp" >> "/tmp/tmpXXW0TCz9.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXguYZnP" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXW0TCz9.asm"
+
+PROCESSING /home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic/cpm_crt0.asm
+cat "/home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic/cpm_crt0.asm" >> "/tmp/tmpXX5HiYX0.asm"
+cat "/tmp/tmpXX5HiYX0.asm" >> "/tmp/tmpXX5HiYX0.tmp"
+cat "/tmp/tmpXX5HiYX0.tmp" >> "/tmp/tmpXX5HiYX0.asm"
+WILL ACT AS CRT
+
+GENERATING OUTPUT
+
+PROCESSING CRT
+z88dk-z80asm -I"/tmp/tmpzccXXguYZnP" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" -I"/home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic"  "/tmp/tmpXX5HiYX0.asm"
+
+z88dk-z80asm -mz80 -b -d  -o"./build/demo/ciademo.com" -L"./build/lib" -L.  -L"/home/sgoldsmith/z88dk/lib/config/../..//lib/clibs/z80"   -I"/tmp/tmpzccXXguYZnP" -D__SCCZ80 -L"/home/sgoldsmith/z88dk/lib/config/../..//lib/clibs" -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" -lc3l -lcpm_clib -l"z80_crt0"     "/tmp/tmpXX5HiYX0.o" "/tmp/tmpXXW0TCz9.o"
+
+PROCESSING ./src/demo/rtcdemo.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "./src/demo/rtcdemo.c" "/tmp/tmpXXS6kchC.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXX1yyPAK/zcc_opt.def" < "/tmp/tmpXXS6kchC.i2" > "/tmp/tmpXXS6kchC.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXX1yyPAK/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXS6kchC.i" -o "/tmp/tmpXXS6kchC.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXS6kchC.opt" > "/tmp/tmpXXS6kchC.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXS6kchC.op1" > "/tmp/tmpXXS6kchC.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXS6kchC.opt" > "/tmp/tmpXXS6kchC.asm"
+cat "/tmp/tmpXXS6kchC.asm" >> "/tmp/tmpXXS6kchC.tmp"
+cat "/tmp/tmpXXS6kchC.tmp" >> "/tmp/tmpXXS6kchC.asm"
+z88dk-z80asm -I"/tmp/tmpzccXX1yyPAK" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXS6kchC.asm"
+
+PROCESSING /home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic/cpm_crt0.asm
+cat "/home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic/cpm_crt0.asm" >> "/tmp/tmpXXitra9P.asm"
+cat "/tmp/tmpXXitra9P.asm" >> "/tmp/tmpXXitra9P.tmp"
+cat "/tmp/tmpXXitra9P.tmp" >> "/tmp/tmpXXitra9P.asm"
+WILL ACT AS CRT
+
+GENERATING OUTPUT
+
+PROCESSING CRT
+z88dk-z80asm -I"/tmp/tmpzccXX1yyPAK" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" -I"/home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic"  "/tmp/tmpXXitra9P.asm"
+
+z88dk-z80asm -mz80 -b -d  -o"./build/demo/rtcdemo.com" -L"./build/lib" -L.  -L"/home/sgoldsmith/z88dk/lib/config/../..//lib/clibs/z80"   -I"/tmp/tmpzccXX1yyPAK" -D__SCCZ80 -L"/home/sgoldsmith/z88dk/lib/config/../..//lib/clibs" -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" -lc3l -lcpm_clib -l"z80_crt0"     "/tmp/tmpXXitra9P.o" "/tmp/tmpXXS6kchC.o"
+
+PROCESSING ./src/demo/siddemo.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "./src/demo/siddemo.c" "/tmp/tmpXXrzVygq.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXYbw4hQ/zcc_opt.def" < "/tmp/tmpXXrzVygq.i2" > "/tmp/tmpXXrzVygq.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXYbw4hQ/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXrzVygq.i" -o "/tmp/tmpXXrzVygq.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXrzVygq.opt" > "/tmp/tmpXXrzVygq.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXrzVygq.op1" > "/tmp/tmpXXrzVygq.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXrzVygq.opt" > "/tmp/tmpXXrzVygq.asm"
+cat "/tmp/tmpXXrzVygq.asm" >> "/tmp/tmpXXrzVygq.tmp"
+cat "/tmp/tmpXXrzVygq.tmp" >> "/tmp/tmpXXrzVygq.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXYbw4hQ" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXrzVygq.asm"
+
+PROCESSING /home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic/cpm_crt0.asm
+cat "/home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic/cpm_crt0.asm" >> "/tmp/tmpXX1AZcCF.asm"
+cat "/tmp/tmpXX1AZcCF.asm" >> "/tmp/tmpXX1AZcCF.tmp"
+cat "/tmp/tmpXX1AZcCF.tmp" >> "/tmp/tmpXX1AZcCF.asm"
+WILL ACT AS CRT
+
+GENERATING OUTPUT
+
+PROCESSING CRT
+z88dk-z80asm -I"/tmp/tmpzccXXYbw4hQ" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" -I"/home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic"  "/tmp/tmpXX1AZcCF.asm"
+
+z88dk-z80asm -mz80 -b -d  -o"./build/demo/siddemo.com" -L"./build/lib" -L.  -L"/home/sgoldsmith/z88dk/lib/config/../..//lib/clibs/z80"   -I"/tmp/tmpzccXXYbw4hQ" -D__SCCZ80 -L"/home/sgoldsmith/z88dk/lib/config/../..//lib/clibs" -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" -lc3l -lcpm_clib -l"z80_crt0"     "/tmp/tmpXX1AZcCF.o" "/tmp/tmpXXrzVygq.o"
+
+PROCESSING ./src/demo/convpcm.c
+z88dk-ucpp -I"/home/sgoldsmith/z88dk/include" -I"./include"  -iquote"." -D__CPM -DCPM -D__CPM__ -DZ80 -D__Z80 -DAMALLOC -D__Z88DK  -DSCCZ80 -DSMALL_C -D__SCCZ80 -isystem"/home/sgoldsmith/z88dk/lib/config/../..//include"    "./src/demo/convpcm.c" "/tmp/tmpXXUm6pk7.i2"
+z88dk-zpragma -sccz80 -zcc-opt="/tmp/tmpzccXXsEtXMA/zcc_opt.def" < "/tmp/tmpXXUm6pk7.i2" > "/tmp/tmpXXUm6pk7.i"
+z88dk-sccz80  -ext=opt -mz80 -zcc-opt="/tmp/tmpzccXXsEtXMA/zcc_opt.def" -standard-escape-chars   "/tmp/tmpXXUm6pk7.i" -o "/tmp/tmpXXUm6pk7.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.9" < "/tmp/tmpXXUm6pk7.opt" > "/tmp/tmpXXUm6pk7.op1"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.2" < "/tmp/tmpXXUm6pk7.op1" > "/tmp/tmpXXUm6pk7.opt"
+z88dk-copt -mz80  "/home/sgoldsmith/z88dk/lib/config/../..//lib/z80rules.1" < "/tmp/tmpXXUm6pk7.opt" > "/tmp/tmpXXUm6pk7.asm"
+cat "/tmp/tmpXXUm6pk7.asm" >> "/tmp/tmpXXUm6pk7.tmp"
+cat "/tmp/tmpXXUm6pk7.tmp" >> "/tmp/tmpXXUm6pk7.asm"
+z88dk-z80asm -I"/tmp/tmpzccXXsEtXMA" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" "/tmp/tmpXXUm6pk7.asm"
+
+PROCESSING /home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic/cpm_crt0.asm
+cat "/home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic/cpm_crt0.asm" >> "/tmp/tmpXXRk9c6Z.asm"
+cat "/tmp/tmpXXRk9c6Z.asm" >> "/tmp/tmpXXRk9c6Z.tmp"
+cat "/tmp/tmpXXRk9c6Z.tmp" >> "/tmp/tmpXXRk9c6Z.asm"
+WILL ACT AS CRT
+
+GENERATING OUTPUT
+
+PROCESSING CRT
+z88dk-z80asm -I"/tmp/tmpzccXXsEtXMA" -D__SCCZ80  -s  -mz80 -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" -I"/home/sgoldsmith/z88dk/lib/config/../..//lib/target/cpm/classic"  "/tmp/tmpXXRk9c6Z.asm"
+
+z88dk-z80asm -mz80 -b -d  -o"./build/demo/convpcm.com" -L"./build/lib" -L.  -L"/home/sgoldsmith/z88dk/lib/config/../..//lib/clibs/z80"   -I"/tmp/tmpzccXXsEtXMA" -D__SCCZ80 -L"/home/sgoldsmith/z88dk/lib/config/../..//lib/clibs" -I"/home/sgoldsmith/z88dk/lib/config/../..//lib" -lc3l -lcpm_clib -l"z80_crt0"     "/tmp/tmpXXRk9c6Z.o" "/tmp/tmpXXUm6pk7.o"
+Side 0: ####################################################################
+Side 1: ####################################################################
+Dir   : %%

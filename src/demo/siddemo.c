@@ -7,8 +7,6 @@
  *
  */
 
-#include <sys/types.h>
-
 #pragma output noprotectmsdos
 
 #include <cia.h>
