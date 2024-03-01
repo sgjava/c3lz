@@ -149,7 +149,7 @@ void convert(char *inFileName, char *outFileName, unsigned char *buffer,
 /*
  * Main function.
  */
-main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 	unsigned char *buffer, bits;
 	/* Make sure we have 4 params */
 	if (argc == 4) {
@@ -157,7 +157,7 @@ main(int argc, char *argv[]) {
 		buffer = (unsigned char*) malloc(BUF_SIZE);
 		if (buffer != NULL) {
 			/* Convert bits param to unsigned char */
-			sscanf(argv[3], "%d", &bits);
+			sscanf(argv[3], "%u", &bits);
 			/* Check bits valid value */
 			if (bits == 4 || bits == 2 || bits == 1) {
 				/* Convert raw file */
@@ -171,4 +171,5 @@ main(int argc, char *argv[]) {
 	} else {
 		dispHelp();
 	}
+	return EXIT_SUCCESS;
 }

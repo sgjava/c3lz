@@ -22,14 +22,19 @@ make lib
 export ZCCCFG="$HOME/z88dk/lib/config"
 # Add demo dir
 mkdir ./build/demo
+
 # Build demo apps
 zcc +cpm -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/ciademo.com ./src/demo/ciademo.c -L./build/lib -lc3l
 zcc +cpm -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/rtcdemo.com ./src/demo/rtcdemo.c -L./build/lib -lc3l
 zcc +cpm -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/siddemo.com ./src/demo/siddemo.c -L./build/lib -lc3l
+zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/baseline.com ./src/demo/baseline.c -L./build/lib -lc3l
 zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/convpcm.com ./src/demo/convpcm.c -L./build/lib -lc3l
+
 # Remove curent disk image
 rm -f ./disks/demo.d71
 # Create new disk image
 cformat -2 ./disks/demo.d71
 # Copy all com files to demo disk
 ctools ./disks/demo.d71 p ./build/demo/*.com
+# Copy all resource files to demo disk
+ctools ./disks/demo.d71 p ./resources/*.*
