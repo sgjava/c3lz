@@ -84,60 +84,43 @@ void convert(char *inFileName, char *outFileName, unsigned char *buffer,
 		unsigned int bufSize, unsigned char bits) {
 	unsigned char tens;
 	FILE *inFile, *outFile;
-	struct stat statRec;
 	unsigned int bytesRead, bytesWrite;
-	unsigned long cnvBytes, cnvStep, cnvNext, startCia, endCia;
+	unsigned long startCia, endCia;
 	printf("\n");
 	/* Check bits valid value */
 	if (bits == 4 || bits == 2 || bits == 1) {
-		if (stat(inFileName, &statRec) == 0) {
-			if ((inFile = fopen(inFileName, "rb")) != NULL) {
-				if ((outFile = fopen(outFileName, "wb")) != NULL) {
-					cnvBytes = 0;
-					/* Progress steps */
-					cnvStep = statRec.st_size / 10;
-					cnvNext = cnvStep;
-					printf(
-							"Converting %s, %ld bytes, ..........\b\b\b\b\b\b\b\b\b\b",
-							inFileName, statRec.st_size);
-					tens = inp(cia1 + ciaTodTen);
-					/* Wait for tenth of a second to change */
-					while (inp(cia1 + ciaTodTen) == tens)
-						;
-					startCia = todToMs(cia1);
-					do {
-						bytesRead = fread(buffer, sizeof(unsigned char),
-								bufSize, inFile);
-						/* Convert 8 bit to 4, 2 or 1 */
-						switch (bits) {
-						case 1:
-							bytesWrite = convert8to1(buffer, bytesRead);
-							break;
-						case 2:
-							bytesWrite = convert8to2(buffer, bytesRead);
-							break;
-						case 4:
-							bytesWrite = convert8to4(buffer, bytesRead);
-							break;
-						}
-						fwrite(buffer, sizeof(unsigned char), bytesWrite,
-								outFile);
-						cnvBytes += bytesRead;
-						while (cnvBytes >= cnvNext) {
-							printf("*"); /* show progress */
-							cnvNext += cnvStep;
-						}
-					} while (bytesRead == bufSize);
-					fclose(outFile);
-					endCia = todToMs(cia1);
-					printf(", %lu ms\n", endCia - startCia);
-				} else {
-					puts("\nUnable to open output file.");
-				}
-				fclose(inFile);
+		if ((inFile = fopen(inFileName, "rb")) != NULL) {
+			if ((outFile = fopen(outFileName, "wb")) != NULL) {
+				printf("Converting %s to %s in ", inFileName, outFileName);
+				tens = inp(cia1 + ciaTodTen);
+				/* Wait for tenth of a second to change */
+				while (inp(cia1 + ciaTodTen) == tens)
+					;
+				startCia = todToMs(cia1);
+				do {
+					bytesRead = fread(buffer, sizeof(unsigned char), bufSize,
+							inFile);
+					/* Convert 8 bit to 4, 2 or 1 */
+					switch (bits) {
+					case 1:
+						bytesWrite = convert8to1(buffer, bytesRead);
+						break;
+					case 2:
+						bytesWrite = convert8to2(buffer, bytesRead);
+						break;
+					case 4:
+						bytesWrite = convert8to4(buffer, bytesRead);
+						break;
+					}
+					fwrite(buffer, sizeof(unsigned char), bytesWrite, outFile);
+				} while (bytesRead == bufSize);
+				fclose(outFile);
+				endCia = todToMs(cia1);
+				printf("%lu ms\n", endCia - startCia);
 			} else {
-				puts("\nUnable to open input file.");
+				puts("\nUnable to open output file.");
 			}
+			fclose(inFile);
 		} else {
 			puts("\nUnable to open input file.");
 		}
