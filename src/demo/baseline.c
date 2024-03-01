@@ -15,7 +15,8 @@ int main(void) {
 	struct stat statRec;
 	buffer = (unsigned char*) malloc(8192);
 	if (stat("ciademo.com", &statRec) == 0) {
-	puts("Hello World");}
+		puts("Hello World");
+	}
 	free(buffer);
 	return EXIT_SUCCESS;
 }
