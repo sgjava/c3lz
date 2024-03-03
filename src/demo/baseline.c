@@ -6,6 +6,8 @@
  * Copyright (c) Steven P. Goldsmith. All rights reserved.
  */
 
+#pragma output REGISTER_SP = -6
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,9 +19,9 @@ int main(void) {
 	FILE *file;
 	/* Alloc conversion buffer */
 	buffer = (unsigned char*) malloc(BUF_SIZE);
-	if ((file = fopen("ciademo.com", "rb")) != NULL) {
+	if ((file = fopen("baseline.com", "rb")) != NULL) {
 		bytesRead = fread(buffer, sizeof(unsigned char), BUF_SIZE, file);
-		printf("%d byted read\n", bytesRead);
+		printf("%d bytes read\n", bytesRead);
 		fclose(file);
 	}
 	free(buffer);
