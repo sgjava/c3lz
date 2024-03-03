@@ -24,11 +24,12 @@ export ZCCCFG="$HOME/z88dk/lib/config"
 mkdir ./build/demo
 
 # Build demo apps
+zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/baseline.com ./src/demo/baseline.c
 zcc +cpm -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/ciademo.com ./src/demo/ciademo.c -L./build/lib -lc3l
 zcc +cpm -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/rtcdemo.com ./src/demo/rtcdemo.c -L./build/lib -lc3l
 zcc +cpm -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/siddemo.com ./src/demo/siddemo.c -L./build/lib -lc3l
-zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/baseline.com ./src/demo/baseline.c -L./build/lib -lc3l
 zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/convpcm.com ./src/demo/convpcm.c -L./build/lib -lc3l
+zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/cpmdir.com ./src/demo/cpmdir.c -L./build/lib -lc3l
 
 # Remove curent disk image
 rm -f ./disks/demo.d71

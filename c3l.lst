@@ -1,3 +1,4 @@
 build/cia/*
 build/rtc/*
 build/sid/*
+build/common/*
