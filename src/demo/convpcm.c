@@ -1,7 +1,9 @@
 /*
  * C128 CP/M C Library C3L
  *
- * Convert 8 bit PCM to 4 bit PCM.
+ * Convert 8 bit PCM to 4 bit PCM. After converting to z88dk I couldn't use the
+ * heap for the buffer because it would corrupt the file name linked list.
+ * Switched to local var.
  *
  * Copyright (c) Steven P. Goldsmith. All rights reserved.
  */
@@ -19,7 +21,7 @@
 /*
  Size of conversion buffer (make divisible by 2, 4 and 8).
  */
-#define BUF_SIZE 8192
+#define BUF_SIZE 1024
 
 /*
  Display program help.
@@ -82,12 +84,12 @@ unsigned int convert8to1(unsigned char *buffer, unsigned int bufSize) {
 /*
  Convert 8 bit raw data to 4, 2 or 1 bit raw data.
  */
-void convert(char *inFileName, char *outFileName, unsigned char *buffer,
-		unsigned int bufSize, unsigned char bits) {
+void convert(char *inFileName, char *outFileName, unsigned char bits) {
 	unsigned char tens;
 	FILE *inFile, *outFile;
 	unsigned int bytesRead, bytesWrite;
 	unsigned long startCia, endCia;
+	unsigned char buffer[BUF_SIZE];
 	printf("\n");
 	/* Check bits valid value */
 	if (bits == 4 || bits == 2 || bits == 1) {
@@ -95,14 +97,14 @@ void convert(char *inFileName, char *outFileName, unsigned char *buffer,
 			if ((outFile = fopen(outFileName, "wb")) != NULL) {
 				printf("Converting %s to %s in ", inFileName, outFileName);
 				tens = inp(cia1 + ciaTodTen);
-				/* Wait for tenth of a second to change */
+				// Wait for tenth of a second to change
 				while (inp(cia1 + ciaTodTen) == tens)
 					;
 				startCia = todToMs(cia1);
 				do {
-					bytesRead = fread(buffer, sizeof(unsigned char), bufSize,
+					bytesRead = fread(buffer, sizeof(unsigned char), BUF_SIZE,
 							inFile);
-					/* Convert 8 bit to 4, 2 or 1 */
+					// Convert 8 bit to 4, 2 or 1
 					switch (bits) {
 					case 1:
 						bytesWrite = convert8to1(buffer, bytesRead);
@@ -115,7 +117,7 @@ void convert(char *inFileName, char *outFileName, unsigned char *buffer,
 						break;
 					}
 					fwrite(buffer, sizeof(unsigned char), bytesWrite, outFile);
-				} while (bytesRead == bufSize);
+				} while (bytesRead == BUF_SIZE);
 				fclose(outFile);
 				endCia = todToMs(cia1);
 				printf("%lu ms\n", endCia - startCia);
@@ -131,28 +133,28 @@ void convert(char *inFileName, char *outFileName, unsigned char *buffer,
 	}
 }
 
-void changeExt(char* filename, const char* newExtension) {
-    char* dot = strrchr(filename, '.'); // Find the last occurrence of '.'
-    if (dot != NULL) {
-        strcpy(dot + 1, newExtension); // Copy the new extension over the old one
-    } else {
-        strcat(filename, "."); // Add a '.' if there is no extension
-        strcat(filename, newExtension); // Add the new extension
-    }
+void changeExt(char *filename, const char *newExtension) {
+	char *dot = strrchr(filename, '.'); // Find the last occurrence of '.'
+	if (dot != NULL) {
+		strcpy(dot + 1, newExtension); // Copy the new extension over the old one
+	} else {
+		strcat(filename, "."); // Add a '.' if there is no extension
+		strcat(filename, newExtension); // Add the new extension
+	}
 }
 
 /*
  * Process files based on standard CP/M search.
  */
-processFiles(char *inFileName, unsigned char *buffer, unsigned char bits) {
+processFiles(char *inFileName, unsigned char bits) {
 	int curDisk, curUser, retVal, dmaOffset, i, j;
 	char name[9], ext[4], dest[13];
 	node *head = NULL;
 	struct fcb dirFcb, retFcb;
-	curDisk = bdos(CPM_IDRV, 0);
-	curUser = bdos(CPM_SUID, 0xff);
 	// FCB is 36 bytes, but only 32 are returned by CPM_FFST and CPM_FNXT calls
 	unsigned char dmaBuf[144];
+	curDisk = bdos(CPM_IDRV, 0);
+	curUser = bdos(CPM_SUID, 0xff);
 	memset(name, ' ', sizeof(name) - 1);
 	name[sizeof(name) - 1] = '\0';
 	for (i = 0; i < sizeof(name) && inFileName[i] != '.'; i++) {
@@ -179,7 +181,7 @@ processFiles(char *inFileName, unsigned char *buffer, unsigned char bits) {
 			strcpy(dest, head->data);
 			changeExt(dest, "RAW");
 			printf("File name: %s\n", head->data);
-			convert(head->data, dest, buffer, BUF_SIZE, bits);
+			convert(head->data, dest, bits);
 			head = head->next;
 		}
 		freeList(head);
@@ -190,24 +192,16 @@ processFiles(char *inFileName, unsigned char *buffer, unsigned char bits) {
  * Main function.
  */
 int main(int argc, char *argv[]) {
-	unsigned char *buffer, bits;
+	unsigned bits;
 	/* Make sure we have 3 params */
 	if (argc == 3) {
-		/* Alloc conversion buffer */
-		buffer = (unsigned char*) malloc(BUF_SIZE);
-		if (buffer != NULL) {
-			/* Convert bits param to unsigned char */
-			sscanf(argv[2], "%u", &bits);
-			/* Check bits valid value */
-			if (bits == 4 || bits == 2 || bits == 1) {
-				processFiles(argv[1], buffer, bits);
-				/* Convert raw file */
-				//convert(argv[1], argv[2], buffer, BUF_SIZE, bits);
-			} else {
-				puts("\nBits value must 4, 2 or 1.");
-			}
-			/* Dispose buffer */
-			free(buffer);
+		/* Convert bits param to unsigned char */
+		sscanf(argv[2], "%u", &bits);
+		/* Check bits valid value */
+		if (bits == 4 || bits == 2 || bits == 1) {
+			processFiles(argv[1], bits);
+		} else {
+			puts("\nBits value must 4, 2 or 1.");
 		}
 	} else {
 		dispHelp();

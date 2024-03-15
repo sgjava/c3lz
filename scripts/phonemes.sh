@@ -45,8 +45,6 @@ for filename in *.wav; do
     [ -e "$filename" ] || continue
     name=$(basename "$filename" .wav)
     ffmpeg -hide_banner -loglevel error -i "$filename" -f u8 -ac 1 -ar 8000 -acodec pcm_u8 "$name.SND"
-    # Create submit file that converts 8 bit snd file to 4 bit raw file 
-    echo "convpcm $name.SND $name.RAW 4\r" >> convert.sub
     # Get snd file size
     filesize=$(stat --format=%s "$name.SND")
     # Calculate 4 bit raw file size   
@@ -69,5 +67,4 @@ cformat -2 ./disks/talk.d71
 # Populate disk image with sound files.
 ctools ./disks/talk.d71 p "$tmpdir/"*.SND
 ctools ./disks/talk.d71 p ./build/demo/convpcm.com
-ctools ./disks/talk.d71 p "$tmpdir/convert.sub"
 ctools ./disks/talk.d71 p "$tmpdir/fileinfo.txt"
