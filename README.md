@@ -8,9 +8,9 @@ I've noticed weird stuff about z88dk with memory management using the heap and s
 https://z88dk.org/forum/viewtopic.php?p=22730#p22730
 
 Yeah, we're travelin' down that lonesome road
- Feel like I'm dragging a heavy load
- Don't try to turn my head away
- I'm flirtin' with disaster every day
+<br>Feel like I'm dragging a heavy load
+<br>Don't try to turn my head away
+<br>I'm flirtin' with disaster every day
 
 And you are too, baby
 
