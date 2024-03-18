@@ -180,7 +180,6 @@ processFiles(char *inFileName, unsigned char bits) {
 		while (head != NULL) {
 			strcpy(dest, head->data);
 			changeExt(dest, "RAW");
-			printf("File name: %s\n", head->data);
 			convert(head->data, dest, bits);
 			head = head->next;
 		}

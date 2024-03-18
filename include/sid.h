@@ -37,7 +37,7 @@
 #define sidFilter3   0x04
 #define sidFilterExt 0x08
 
-extern void clearSid();
+extern void __LIB__ clearSid();
 extern void __LIB__ setSidVol(unsigned char amp, unsigned char filter);
 extern void __LIB__ setSidEnv(unsigned int voice, unsigned char attack, unsigned char decay, unsigned char sustain,
 unsigned char release);
@@ -47,5 +47,8 @@ extern void __LIB__ setSidAtt(unsigned int voice, unsigned char waveform);
 extern void __LIB__ setSidPulWav(unsigned int voice, unsigned int width);
 extern void __LIB__ readSidPots(unsigned char *x1, unsigned char *y1, unsigned char *x2, unsigned char *y2);
 extern void __LIB__ readMouseSid(unsigned char *x1, unsigned char *y1, unsigned char *x2, unsigned char *y2);
+extern void __LIB__ playPcm1Sid(unsigned char *buffer, unsigned int len, unsigned char vol) __smallc;
+extern void __LIB__ playPcm2Sid(unsigned char *buffer, unsigned int len) __smallc;
+extern void __LIB__ playPcm4Sid(unsigned char *buffer, unsigned int len) __smallc;
 
 #endif

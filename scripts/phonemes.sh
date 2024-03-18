@@ -67,4 +67,5 @@ cformat -2 ./disks/talk.d71
 # Populate disk image with sound files.
 ctools ./disks/talk.d71 p "$tmpdir/"*.SND
 ctools ./disks/talk.d71 p ./build/demo/convpcm.com
+ctools ./disks/talk.d71 p ./build/demo/playpcm.com
 ctools ./disks/talk.d71 p "$tmpdir/fileinfo.txt"

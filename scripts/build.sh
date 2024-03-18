@@ -30,6 +30,7 @@ zcc +cpm -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/rtcdemo.com ./s
 zcc +cpm -vn -I"$HOME/z88dk/include" -I./include -o ./build/demo/siddemo.com ./src/demo/siddemo.c -L./build/lib -lc3l
 zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/convpcm.com ./src/demo/convpcm.c -L./build/lib -lc3l
 zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/cpmdir.com ./src/demo/cpmdir.c -L./build/lib -lc3l
+zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/playpcm.com ./src/demo/playpcm.c -L./build/lib -lc3l
 
 # Remove curent disk image
 rm -f ./disks/demo.d71
