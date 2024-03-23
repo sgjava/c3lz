@@ -13,7 +13,6 @@
 #include <cia.h>
 #include <common.h>
 #include <cpm.h>
-#include <sys/stat.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -27,9 +26,8 @@
  Display program help.
  */
 void dispHelp() {
-	puts("\nconvpcm input output bits");
-	puts(
-			"convpcm FILENAME.SND 4 (FILENAME.SND is 8 bit and FILENAM.RAW is 4 bit)");
+	puts("\nconvpcm input bits");
+	puts("convpcm ????????.snd 4");
 }
 
 /*
@@ -168,8 +166,12 @@ processFiles(char *inFileName, unsigned char bits) {
 	for (j = 0; j < sizeof(ext); j++) {
 		ext[j] = inFileName[i++];
 	}
+	// Zero out FCB
+	memset(dirFcb, 0, sizeof(dirFcb));
+	memcpy(dirFcb.name, name, sizeof(dirFcb.name));
+	memcpy(dirFcb.ext, ext, sizeof(dirFcb.ext));
 	// Use current disk and user
-	retVal = initDir(curDisk, curUser, name, ext, &dirFcb, dmaBuf);
+	retVal = initDir(curDisk, curUser, &dirFcb, dmaBuf);
 	if (retVal == 0) {
 		// Copy first file name to FCB from DMA buffer
 		memcpy(&retFcb, dmaBuf, sizeof(struct fcb));

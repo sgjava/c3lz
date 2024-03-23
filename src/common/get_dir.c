@@ -8,7 +8,6 @@
 
 #include <common.h>
 #include <cpm.h>
-#include <stdlib.h>
 #include <string.h>
 
 /*

@@ -6,9 +6,9 @@
  * Copyright (c) Steven P. Goldsmith. All rights reserved.
  */
 
-#include <common.h>
 #include <cpm.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*
  * Convert name and ext from FCB to normal 8.3 file name string.

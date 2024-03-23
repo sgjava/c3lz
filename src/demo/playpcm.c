@@ -7,12 +7,15 @@
  */
 
 #include <cia.h>
+#include <malloc.h>
 #include <sid.h>
-#include <cpm.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+
+#pragma output noprotectmsdos
+#pragma output CRT_STACK_SIZE = 1024
 
 /*
  Display program help.
@@ -58,7 +61,8 @@ void swapNibbles(unsigned char *buffer, unsigned int len) {
 /*
  Play sample from buffer.
  */
-void play(unsigned char *buffer, unsigned int len, unsigned int hz, unsigned char bits) {
+void play(unsigned char *buffer, unsigned int len, unsigned int hz,
+		unsigned char bits) {
 	unsigned char tens;
 	unsigned long startCia, endCia;
 	/* Start HZ timer in continuous mode */
@@ -114,7 +118,9 @@ void loadAll(unsigned char *buffer, unsigned int len, char *fileName) {
  */
 main(int argc, char *argv[]) {
 	unsigned char *buffer, bits;
-	unsigned int fileSize, minHz = 4001, maxHz = 19001, maxFileSize = 45056, hz;
+	unsigned int total, largest, fileSize, minHz = 4001, maxHz = 19001, hz;
+	mallinfo(&total, &largest);
+	printf("Heap size %u largest block %u\n", total, largest);
 	/* Make sure we have 4 or more params */
 	if (argc > 3) {
 		/* Convert hz param to unsigned int */
@@ -125,12 +131,10 @@ main(int argc, char *argv[]) {
 		if (hz > minHz && hz < maxHz) {
 			/* Check bits valid value */
 			if (bits == 4 || bits == 2 || bits == 1) {
-				/* BDOS return and display error */
-				bdos(45, 0x0fe);
 				/* Get raw file size */
 				fileSize = getFileSize(argv[1]);
 				/* Check file size */
-				if (fileSize > 0 && fileSize < maxFileSize) {
+				if (fileSize > 0 && fileSize < largest) {
 					/* Allocate buffer */
 					buffer = (unsigned char*) malloc(fileSize);
 					if (buffer != NULL) {

@@ -28,8 +28,12 @@ int main(void) {
 	struct fcb dirFcb, retFcb;
 	// FCB is 36 bytes, but only 32 are returned by CPM_FFST and CPM_FNXT calls
 	unsigned char dmaBuf[144];
+	// Zero out FCB
+	memset(dirFcb, 0, sizeof(dirFcb));
+	memcpy(dirFcb.name, "????????", sizeof(dirFcb.name));
+	memcpy(dirFcb.ext, "???", sizeof(dirFcb.ext));
 	// Use A0
-	retVal = initDir(0, 0, "????????", "???", &dirFcb, dmaBuf);
+	retVal = initDir(0, 0, &dirFcb, dmaBuf);
 	if (retVal == 0) {
 		// Copy first file name to FCB from DMA buffer
 		memcpy(&retFcb, dmaBuf, sizeof(struct fcb));

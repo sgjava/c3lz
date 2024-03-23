@@ -10,6 +10,6 @@
 /*
  * Start release cycle.
  */
-void setSidRel(unsigned int Voice, unsigned char Waveform) {
-	outp(Voice + 4, Waveform);
+void setSidRel(unsigned int voice, unsigned char waveform) {
+	outp(voice + 4, waveform);
 }
