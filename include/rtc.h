@@ -7,6 +7,8 @@
 #ifndef _RTC_H
 #define _RTC_H
 
+#include <sys/compiler.h>
+
 #define rtcRegA      0xde00 /* Register A address */
 #define rtcRegB      0xde01 /* Register B address */
 #define rtcSeconds      0x0 /* Seconds */
@@ -18,8 +20,8 @@
 #define rtcMode         0xb /* Mode */
 #define rtcDefaultMode  0x87 /* Binary, 24h, DST */
 
-extern void /*__LIB__*/ setRtcReg(unsigned char reg, unsigned char value);
-extern unsigned char /*__LIB__*/ getRtcReg(unsigned char reg);
-extern void /*__LIB__*/ setRtcMode(unsigned char mode);
+extern void __LIB__ setRtcReg(unsigned char reg, unsigned char value);
+extern unsigned char __LIB__ getRtcReg(unsigned char reg);
+extern void __LIB__ setRtcMode(unsigned char mode);
 
 #endif

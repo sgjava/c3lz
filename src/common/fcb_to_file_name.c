@@ -6,6 +6,7 @@
  * Copyright (c) Steven P. Goldsmith. All rights reserved.
  */
 
+#include <common.h>
 #include <cpm.h>
 #include <stdlib.h>
 #include <string.h>

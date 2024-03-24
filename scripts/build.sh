@@ -12,13 +12,6 @@
 
 # Project root (assumes starting in scripts dir)
 cd ../
-
-# Replace ' /*__LIB__*/ ' with ' __LIB__ ', so headers work with z88dk compile
-find ./include -type f -name "*.h" -exec sed -i "s|' /*__LIB__*/ '| ' __LIB__ '|g" {} +
-# Replace '/*__smallc*/' with '__smallc', so headers work with z88dk compile
-find ./include -type f -name "*.h" -exec sed -i "s|'/*__smallc*/'| '__smallc'|g" {} +
-
-
 # Clean project
 make clean
 # Compile library source
@@ -40,11 +33,6 @@ zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/convp
 zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/cpmdir.com ./src/demo/cpmdir.c -L./build/lib -lc3l
 zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/playpcm.com ./src/demo/playpcm.c -L./build/lib -lc3l
 zcc +cpm -vn -DAMALLOC -I"$HOME/z88dk/include" -I./include -o ./build/demo/compile.com ./src/demo/compile.c -L./build/lib -lc3l
-
-# Replace ' __LIB__ ' with ' /*__LIB__*/ ', so headers work with Eclipse
-find ./include -type f -name "*.h" -exec sed -i "s|' __LIB__ '| ' /*__LIB__*/ '|g" {} +
-# Replace '__smallc' with '/*__smallc*/', so headers work with Eclipse
-find ./include -type f -name "*.h" -exec sed -i "s|'__smallc'| '/*__smallc*/'|g" {} +
 
 # Remove curent demo disk image
 rm -f ./disks/demo.d71

@@ -9,6 +9,8 @@
 #ifndef _COMMON_H
 #define _COMMON_H
 
+#include <sys/compiler.h>
+
 /*
  * Forward reference.
  */
@@ -23,11 +25,11 @@ typedef struct node {
 	struct node *next; // Pointer to the next node
 };
 
-extern node /*__LIB__*/ *createNode(char *data);
-extern void /*__LIB__*/ insertEnd(node **head, char *data);
-extern void /*__LIB__*/ freeList(node *head);
-extern int /*__LIB__*/ initDir(int login, int user, struct fcb *fcb, unsigned char dmaBuf[]);
-extern int /*__LIB__*/ getDir(struct fcb *fcb, unsigned char dmaBuf[], node *head);
-extern char /*__LIB__*/ *fcbToFileName(struct fcb *fcb);
+extern node __LIB__ *createNode(char *data);
+extern void __LIB__ insertEnd(node **head, char *data);
+extern void __LIB__ freeList(node *head);
+extern int __LIB__ initDir(int login, int user, struct fcb *fcb, unsigned char dmaBuf[]);
+extern int __LIB__ getDir(struct fcb *fcb, unsigned char dmaBuf[], node *head);
+extern char __LIB__ *fcbToFileName(struct fcb *fcb);
 
 #endif

@@ -9,8 +9,8 @@
 #include <common.h>
 #include <cpm.h>
 #include <malloc.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 //#pragma output noprotectmsdos
