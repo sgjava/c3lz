@@ -6,6 +6,7 @@
  * Copyright (c) Steven P. Goldsmith. All rights reserved.
  */
 
+#include <stdlib.h>
 #include <stdio.h>
 
 #pragma output noprotectmsdos
