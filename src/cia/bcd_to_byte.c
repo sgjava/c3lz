@@ -1,5 +1,5 @@
 /*
- * C128 6526 CIA demo functions..
+ * C128 6526 CIA demo functions.
  *
  * Copyright (c) Steven P. Goldsmith. All rights reserved.
  */

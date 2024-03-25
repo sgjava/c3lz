@@ -76,7 +76,7 @@ unsigned int loadAll(char *fileName, arpabetName name,
 		}
 		fclose(file);
 		endCia = todToMs(cia1);
-		printf("\n\n%d files loaded, %d total bytes, %u ms", i, totalSize,
+		printf("\n\n%d files loaded, %d total bytes, %lu ms", i, totalSize,
 				endCia - startCia);
 	} else {
 		puts("\nUnable to open file.");
@@ -110,7 +110,7 @@ unsigned int writePhonemes(char *fileName, phonemes *p,
 		}
 		fclose(file);
 		endCia = todToMs(cia1);
-		printf("\n\n%d buffers written, %d total bytes, %u ms", i, totalSize,
+		printf("\n\n%d buffers written, %d total bytes, %lu ms", i, totalSize,
 				endCia - startCia);
 	}
 	return totalSize;

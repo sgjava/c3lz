@@ -55,7 +55,7 @@ void swapNibbles(unsigned char *buffer, unsigned int len) {
 		buffer[i] = (buffer[i] << 4) | (buffer[i] >> 4);
 	}
 	endCia = todToMs(cia1);
-	printf("%u ms\n", endCia - startCia);
+	printf("%lu ms\n", endCia - startCia);
 }
 
 /*
@@ -88,7 +88,7 @@ void play(unsigned char *buffer, unsigned int len, unsigned int hz,
 	endCia = todToMs(cia1);
 	/* Stop CIA 2 timer A */
 	outp(cia2+ciaCtrlRegA, ciaStopTimer);
-	printf("%u ms\n", endCia - startCia);
+	printf("%lu ms\n", endCia - startCia);
 }
 
 /*
@@ -108,7 +108,7 @@ void loadAll(unsigned char *buffer, unsigned int len, char *fileName) {
 		fread(buffer, sizeof(unsigned char), len, rawFile);
 		fclose(rawFile);
 		endCia = todToMs(cia1);
-		printf("%u ms\n", endCia - startCia);
+		printf("%lu ms\n", endCia - startCia);
 	} else
 		puts("\nUnable to open file.");
 }
