@@ -49,7 +49,7 @@ rm -f ./disks/playpcm.d71
 cformat -2 ./disks/playpcm.d71
 # Copy resource files to demo disk
 ctools ./disks/playpcm.d71 p ./resources/*.snd
+ctools ./disks/playpcm.d71 p ./resources/*.raw
 # Copy com files to playpcm disk
-ctools ./disks/playpcm.d71 p ./build/demo/baseline.com
 ctools ./disks/playpcm.d71 p ./build/demo/convpcm.com
 ctools ./disks/playpcm.d71 p ./build/demo/playpcm.com
